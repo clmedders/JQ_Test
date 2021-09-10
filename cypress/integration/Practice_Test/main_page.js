@@ -19,6 +19,7 @@ describe("make sure site works", () => {
 	it('scroll halfway', () => {
 		cy.scrollTo("center")
 	})
+
 	it("Page can be scrolled to the bottom", () => {
 		//page should be able to scroll to bottom 
 		//should contain 'tour dates'
@@ -31,6 +32,7 @@ describe("make sure site works", () => {
 			"https://www.instagram.com/joshqueenmusic", 
 			"http://www.facebook.com/joshqueenmusic", 
 			"https://www.youtube.com/channel/UCGKkW-dYjNIrCDIv6RfaczQ", // #this is an aray be sure to use a comma when breaking them up 
+			'https://distrokid.com/hyperfollow/joshqueen/things-you-tell-the-people-you-love'
 		]
 		//loop through extURLs stes 
 		//for each URL find the icon nav for desktop

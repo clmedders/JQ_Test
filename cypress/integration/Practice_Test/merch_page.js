@@ -37,4 +37,5 @@ describe('check merch page and that items can be selected and added to cart', ()
     cy.get('[class="icon icon--cart"]').click()
     cy.url().should('include', 'cart')
   })
+ 
 })
