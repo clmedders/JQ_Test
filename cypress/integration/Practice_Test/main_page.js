@@ -19,7 +19,24 @@ describe("make sure site works", () => {
 	it('scroll halfway', () => {
 		cy.scrollTo("center")
 	})
+	it('can type email in field', () => {
+		cy.get('[name="email"]').type('john-doe@example.com')
+	})
+	it('pre order now button works', () => {
+		cy.get('[class="image-button-inner"]').click()
+		cy.url().should('include', 'merch')
+	})
+	it('merch buttons take you to the correct page', () => {
+		cy.get('[id="block-92a18c583f745eed6b6e"]').click()
+		cy.url().should('include', 'poster')
+		cy.go('back')
+		cy.get('[id="block-94cbe767402f32aa8ae6"]').click()
+		cy.url().should('include', 'album')
+		cy.go('back')
+		cy.get('[id="block-e67412d387ecff370d3d"]').click()
+		cy.url().should('include', 't-shirt')
 
+	})
 	it("Page can be scrolled to the bottom", () => {
 		//page should be able to scroll to bottom 
 		//should contain 'tour dates'

@@ -37,5 +37,8 @@ describe('check merch page and that items can be selected and added to cart', ()
     cy.get('[class="icon icon--cart"]').click()
     cy.url().should('include', 'cart')
   })
- 
+ it('logo goes back to home page', () => {
+   cy.get('[class="header-announcement-bar-wrapper"]').click()
+   cy.url().should('include', 'joshqueen')
+ })
 })
